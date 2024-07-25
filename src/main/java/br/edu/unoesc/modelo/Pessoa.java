@@ -1,13 +1,28 @@
 package br.edu.unoesc.modelo;
 
+import jakarta.persistence.*;
+
 @SuppressWarnings("serial")
+@Entity
+@Table(name = "PESSOA")
 public class Pessoa extends AbstractEntity{
 
+	@Column(nullable = false, unique = true)
 	private String nome;
-	private String cpfFormatado;
-	private int dataNascimento;
+	
+	@Column(name = "cpf_formatado", nullable = false)
+	private String cpfFormatado;	
+
+	@Column(name = "data_nascimento",nullable = false)
+	private String dataNascimento;
+	
+	@Column(nullable = false)
 	private String genero;
-	private Short numeroTelefone;
+	
+	@Column(name = "numero_telefone", nullable = false)
+	private String numeroTelefone;
+	
+	@Column(name = "endereco_email",nullable = false)
 	private String enderecoEmail;
 	
 	public String getNome() {
@@ -22,10 +37,10 @@ public class Pessoa extends AbstractEntity{
 	public void setCpfFormatado(String cpfFormatado) {
 		this.cpfFormatado = cpfFormatado;
 	}
-	public int getDataNascimento() {
+	public String getDataNascimento() {
 		return dataNascimento;
 	}
-	public void setDataNascimento(int dataNascimento) {
+	public void setDataNascimento(String dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 	public String getGenero() {
@@ -34,10 +49,10 @@ public class Pessoa extends AbstractEntity{
 	public void setGenero(String genero) {
 		this.genero = genero;
 	}
-	public Short getNumeroTelefone() {
+	public String getNumeroTelefone() {
 		return numeroTelefone;
 	}
-	public void setNumeroTelefone(Short numeroTelefone) {
+	public void setNumeroTelefone(String numeroTelefone) {
 		this.numeroTelefone = numeroTelefone;
 	}
 	public String getEnderecoEmail() {

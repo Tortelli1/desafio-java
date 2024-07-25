@@ -1,12 +1,17 @@
 package br.edu.unoesc.modelo;
 
+import jakarta.persistence.*;
+
 @SuppressWarnings("serial")
+@Entity
+@Table(name = "FORMACAO")
 public class Formacao extends AbstractEntity{
 	
 	private String nomeCurso;
 	private String nivelCurso;
 	private String dataConclusão;
 	private String instituicaoEnsino;
+	
 	public String getNomeCurso() {
 		return nomeCurso;
 	}

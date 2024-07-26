@@ -7,9 +7,16 @@ import jakarta.persistence.*;
 @Table(name = "FORMACAO")
 public class Formacao extends AbstractEntity{
 	
+	@Column(name = "nome_curso",nullable = false)
 	private String nomeCurso;
+	
+	@Column(name = "nivel_curso",nullable = false)
 	private String nivelCurso;
+	
+	@Column(name = "data_conclusao",nullable = false)
 	private String dataConclusão;
+	
+	@Column(name = "instituicao_ensino",nullable = false)
 	private String instituicaoEnsino;
 	
 	public String getNomeCurso() {

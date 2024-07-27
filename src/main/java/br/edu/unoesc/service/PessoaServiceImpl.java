@@ -43,5 +43,4 @@ public class PessoaServiceImpl implements PessoaService{
 		return dao.findAll();
 	}
 
-	
 }

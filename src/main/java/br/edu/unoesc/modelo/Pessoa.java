@@ -16,7 +16,7 @@ public class Pessoa extends AbstractEntity{
 	@Column(name = "cpf_formatado", nullable = false)
 	private String cpfFormatado;	
 
-	@Column(name = "data_nascimento",nullable = false)
+	@Column(name = "data_nascimento" , nullable = false)
 	private String dataNascimento;
 	
 	@Column(nullable = false)
@@ -25,12 +25,12 @@ public class Pessoa extends AbstractEntity{
 	@Column(name = "numero_telefone", nullable = false)
 	private String numeroTelefone;
 	
-	@Column(name = "endereco_email",nullable = false)
+	@Column(name = "endereco_email", nullable = false)
 	private String enderecoEmail;
 	
 	@OneToOne
 	private Time time;
-	
+
 	public String getNome() {
 		return nome;
 	}

@@ -2,11 +2,15 @@ package br.edu.unoesc.modelo.enums;
 
 public enum Genero {
 
-	MASCULINO,
-	FEMININO,
-	OUTROS;
+	MASCULINO("Masculino"),
+	FEMININO("Feminino"),
+	OUTROS("Outros");
 	
 	private String genero;
+
+	Genero(String genero) {
+		this.genero = genero;
+	}
 
 		public String getGenero() {
 			return genero;

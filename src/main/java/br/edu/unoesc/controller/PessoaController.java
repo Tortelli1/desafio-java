@@ -19,12 +19,12 @@ public class PessoaController {
 		
 	@GetMapping("/cadastrar")
 	public String cadastrar(Pessoa pessoa) {
-		return "/funcionario/cadastro";
+		return "/pessoa/cadastro";
 	}
 	
 	@GetMapping("/listar")
 	public String listar() {
-		return "/funcionario/lista";
+		return "/pessoa/lista";
 	}
 	
 	@PostMapping("/salvar")

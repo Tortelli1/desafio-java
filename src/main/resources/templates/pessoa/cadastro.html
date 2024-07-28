@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html layout:decorate="~{layout}">
-<head>
-	<meta charset="UTF-8"/>
-</head>
+<head><meta charset="UTF-8"/></head>
 <body>
 	 <section class="layout-content" layout:fragment="corpo">
 	        <div class="page-header">
@@ -17,11 +15,7 @@
 	                </div>
 	                <a class="btn btn-primary btn-md" href="/pessoa/listar" role="button">
 	                    <span class="oi oi-spreadsheet" title="Cadastro" aria-hidden="true"></span>
-	                    <span>Listar Pessoa</span>
-	                </a>
-	                <a class="btn btn-primary btn-md" href="/" role="button">
-	                    <span class="oi oi-spreadsheet" title="Home" aria-hidden="true"></span>
-	                    <span>Home</span>
+	                    <span>Lista de Pessoa</span>
 	                </a>
 	            </nav>
 	        </div>
@@ -80,6 +74,29 @@
 	
 	                        </div>
 	                    </div>
+	                    
+	                    <div class="form-group col-md-6">
+	                        <label for="genero">Formação</label>
+	                        <select id="genero" class="form-control" th:field="*{formacao.id}">
+	                            <option value="">Selecione...</option>
+	                            <option th:each="f : ${formacao}" th:value="${f.id}" th:text="${f.nomeCurso}"></option>
+	                        </select>
+	                        <div class="invalid-feedback">
+	
+	                        </div>
+	                    </div>
+	                    
+	                    <div class="form-group col-md-6">
+	                        <label for="genero">Time</label>
+	                        <select id="genero" class="form-control" th:field="*{time.id}">
+	                            <option value="">Selecione...</option>
+	                            <option th:each="t : ${time}" th:value="${t.id}" th:text="${t.nomeTime}"></option>
+	                        </select>
+	                        <div class="invalid-feedback">
+	
+	                        </div>
+	                    </div>
+	                    
 	                </div>
 	                <input type="hidden" id="id" th:field="*{id}"/>
 	                <button type="submit" class="btn btn-primary btn-sm">Salvar</button>

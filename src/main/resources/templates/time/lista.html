@@ -10,7 +10,7 @@
 	                <ul class="navbar-nav mr-auto">
 	                    <li class="nav-item active">
 	                        <i class="oi oi-caret-right"></i>
-	                        <span>Lista de Times</span>
+	                        <span>Listar Times</span>
 	                    </li>
 	                </ul>
 	            </div>
@@ -39,10 +39,10 @@
 		                        <td th:text="${t.nomeTime}"></td>
 		                        <td th:text="${t.setor}"></td>
 		                        <td colspan="2">
-		                            <a class="btn btn-info btn-sm" th:href="@{/time/editar/{id} (id=${f.id}) }" role="button">
+		                            <a class="btn btn-info btn-sm" th:href="@{/time/editar/{id} (id=${t.id}) }" role="button">
 		                                <span class="oi oi-brush" title="Editar" aria-hidden="true"></span>
 		                            </a>
-		                            <button th:id="${#strings.concat('btn_time/excluir/', f.id) }" type="button" 
+		                            <button th:id="${#strings.concat('btn_time/excluir/', t.id) }" type="button" 
 		                            		class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModal">
 		                                <span class="oi oi-circle-x" title="Exclusão desabilitada" aria-hidden="true"></span>
 		                            </button>

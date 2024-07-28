@@ -12,10 +12,10 @@ import jakarta.persistence.Table;
 @Table(name = "PESSOA")
 public class Pessoa extends AbstractEntity{
 	
-	@Column(nullable = false, unique = true)
+	@Column(nullable = false)
 	private String nome;
 	
-	@Column(name = "cpf_formatado", nullable = false)
+	@Column(name = "cpf_formatado", nullable = false, unique = true)
 	private String cpfFormatado;	
 
 	@Column(name = "data_nascimento" , nullable = false)
@@ -27,11 +27,14 @@ public class Pessoa extends AbstractEntity{
 	@Column(name = "numero_telefone", nullable = false)
 	private String numeroTelefone;
 	
-	@Column(name = "endereco_email", nullable = false)
+	@Column(name = "endereco_email", nullable = false, unique = true)
 	private String enderecoEmail;
 	
 	@OneToOne
 	private Time time;
+	
+	@OneToOne
+	private Formacao formacao;
 
 	public String getNome() {
 		return nome;
@@ -87,6 +90,14 @@ public class Pessoa extends AbstractEntity{
 
 	public void setTime(Time time) {
 		this.time = time;
+	}
+
+	public Formacao getFormacao() {
+		return formacao;
+	}
+
+	public void setFormacao(Formacao formacao) {
+		this.formacao = formacao;
 	}
 
 	

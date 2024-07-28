@@ -17,6 +17,10 @@
 	                    <span class="oi oi-spreadsheet" title="Cadastro" aria-hidden="true"></span>
 	                    <span>Listar Pessoa</span>
 	                </a>
+	                <a class="btn btn-primary btn-md" href="/home" role="button">
+	                    <span class="oi oi-spreadsheet" title="Home" aria-hidden="true"></span>
+	                    <span>Home</span>
+	                </a>
 	            </nav>
 	        </div>
 	
@@ -56,7 +60,7 @@
 	                        <label for="genero">Genero</label>
 	                        <select id="genero" class="form-control" th:field="*{genero}">
 	                            <option value="">Selecione...</option>
-	                            <option th:each="g : ${genero}" th:value="${g}" th:text="${g}"></option>
+	                            <option th:each="g : ${genero}" th:value="${g.name()}" th:text="${g.descricao}"></option>
 	                        </select>
 	                        <div class="invalid-feedback">
 	

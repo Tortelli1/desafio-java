@@ -6,18 +6,14 @@ public enum Genero {
 	FEMININO("Feminino"),
 	OUTROS("Outros");
 	
-	private String genero;
+	private String descricao;
 
-	Genero(String genero) {
-		this.genero = genero;
+	Genero(String descricao) {
+		this.descricao = descricao;
 	}
 
-		public String getGenero() {
-			return genero;
-		}
-	
-		public void setGenero(String genero) {
-			this.genero = genero;
+		public String getDescricao() {
+			return descricao;
 		}
 	
 }

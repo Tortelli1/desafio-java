@@ -39,7 +39,7 @@
 	                        <label for="nivelFormacao">Nível da Formação</label>
 	                        <select id="nivelFormacao" class="form-control" th:field="*{nivelFormacao}">
 	                            <option value="">Selecione...</option>
-	                            <option th:each="n : ${nivelFormacao}" th:value="${n}" th:text="${n}"></option>
+	                            <option th:each="n : ${nivelFormacao}" th:value="${n.name()}" th:text="${n.descricao}"></option>
 	                        </select>
 	                        <div class="invalid-feedback">
 	

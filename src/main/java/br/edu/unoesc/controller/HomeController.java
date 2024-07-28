@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
 
 	@GetMapping("/")
-	public String quadro() {
+	public String home() {
 		return "/home";
 	}
 }

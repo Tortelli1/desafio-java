@@ -10,19 +10,14 @@ public enum NivelFormacao {
 	DOUTORADO("Doutorado"),
 	OUTRAS_FORMACOES("Outras formações");
 	
-	private String nivelFormacao;
+	private String descricao;
 	
-	NivelFormacao(String nivelFormacao) {
-		this.nivelFormacao = nivelFormacao;
+	NivelFormacao(String descricao) {
+		this.descricao = descricao;
 	}
 
-		public String getNivelFormacao() {
-			return nivelFormacao;
+		public String getDescricao() {
+			return descricao;
 		}
-	
-		public void setNivelFormacao(String nivelFormacao) {
-			this.nivelFormacao = nivelFormacao;
-		}
-	
 		
 }

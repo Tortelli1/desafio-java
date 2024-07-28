@@ -43,10 +43,10 @@ public class PessoaController {
 	@GetMapping("/editar/{id}")
 	public String editar(@PathVariable("id") Long id, ModelMap model) {
 		model.addAttribute("pessoa", pessoaService.buscarPorId(id));
-		return "pessoa/cadastrar";
+		return "pessoa/cadastro";
 	}
 	
-	@GetMapping("/editar")
+	@PostMapping("/editar")
 	public String editar(Pessoa pessoa, RedirectAttributes attr) {
 		pessoaService.editar(pessoa);
 		attr.addFlashAttribute("sucess", "Cadastro de Pessoa, editado com sucesso!");

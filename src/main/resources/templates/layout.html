@@ -45,30 +45,48 @@
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="/webjars/jquery/jquery.min.js"></script>
 	<script src="/webjars/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
-	<script	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript">
-	    
-		var url = '';
-		
-		$('button[id*="btn_"]').click(function(){
-			url = "http://localhost:8080/" + $(this).attr('id').split("_")[1];
-		});
-		
-		$('#ok_confirm').click(function(){
-			document.location.href = url;
-		})
-	
-		$(function() {
-			$('[data-toggle="popover"]').popover();
-		});
-		
-		$(document).ready(function(){
+	    $(document).ready(function(){
+		    // Aplicação de máscara para CPF
+		    $('#cpf').mask('000.000.000-00');
+		    
+		    // Aplicação de máscara para o N° de Telefone
+		    $('#numeroTelefone').mask('(00) 00000-0000');
+		    
+		    // Código para popovers
+		    $('[data-toggle="popover"]').popover();
+		    
+		    // Toggle da sidebar
 		    $(".navbar-toggle").click(function(){
 		        $(".sidebar").toggleClass("sidebar-open");
-		    })
-		});
+		    });
+		    
+		    // Configuração de URL para o botão
+		    var url = '';
+		    $('button[id*="btn_"]').click(function(){
+		        url = "http://localhost:8080/" + $(this).attr('id').split("_")[1];
+		    });
+		    
+		    $('#ok_confirm').click(function(){
+		        document.location.href = url;
+		    });
+		    
+		    $('form').on('submit', function() {
+	            var dateInput = $('#dataNascimento');
+	            var dateValue = dateInput.val();
 
+	            // Converter data no formato dd/mm/yyyy para yyyy-mm-dd
+	            var parts = dateValue.split('/');
+	            if (parts.length === 3) {
+	                var formattedDate = `${parts[2]}-${parts[1]}-${parts[0]}`;
+	                dateInput.val(formattedDate);
+	            }
+	        });
+		    
+		    
+		});
 	</script>
 </body>
 </html>

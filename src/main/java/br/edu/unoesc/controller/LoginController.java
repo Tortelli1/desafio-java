@@ -1,5 +1,11 @@
-package br.edu.unoesc.controller;
-
-public class LoginController {
-
-}
+//package br.edu.unoesc.controller;
+//
+//import org.springframework.stereotype.Controller;
+//
+//@Controller
+//public class LoginController {
+//
+//	public String login() {
+//		
+//	}
+//}

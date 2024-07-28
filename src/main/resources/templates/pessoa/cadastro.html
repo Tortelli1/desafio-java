@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html layout:decorate="~{layout}">
-<head><meta charset="UTF-8"/></head>
+<head>
+	<meta charset="UTF-8"/>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+</head>
 <body>
 	 <section class="layout-content" layout:fragment="corpo">
 	        <div class="page-header">
@@ -17,7 +21,7 @@
 	                    <span class="oi oi-spreadsheet" title="Cadastro" aria-hidden="true"></span>
 	                    <span>Listar Pessoa</span>
 	                </a>
-	                <a class="btn btn-primary btn-md" href="/home" role="button">
+	                <a class="btn btn-primary btn-md" href="/" role="button">
 	                    <span class="oi oi-spreadsheet" title="Home" aria-hidden="true"></span>
 	                    <span>Home</span>
 	                </a>
@@ -88,5 +92,12 @@
 	            </form>
 	        </div>
 	    </section>
+	    
+		    <script>
+	        $(document).ready(function(){
+	            $('#cpf').mask('000.000.000-00');
+	        });
+	    </script>
+    
 </body>
 </html>		

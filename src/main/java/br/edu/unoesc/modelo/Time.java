@@ -7,17 +7,17 @@ import jakarta.persistence.*;
 @Table(name = "TIME")
 public class Time extends AbstractEntity{
 
-	@Column(nullable = false)
-	private String nome;
+	@Column(name = "nome_Time", nullable = false)
+	private String nomeTime;
 	
 	@Column(nullable = false)
 	private String setor;
 	
-	public String getNome() {
-		return nome;
+	public String getNomeTime() {
+		return nomeTime;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNomeTime(String nomeTime) {
+		this.nomeTime = nomeTime;
 	}
 	public String getSetor() {
 		return setor;

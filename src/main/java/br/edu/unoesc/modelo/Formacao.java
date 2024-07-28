@@ -10,11 +10,11 @@ public class Formacao extends AbstractEntity{
 	@Column(name = "nome_curso", nullable = false, unique = true)
 	private String nomeCurso;
 	
-	@Column(name = "nivel_curso", nullable = false)
-	private String nivelCurso;
+	@Column(name = "nivel_formacao", nullable = false)
+	private String nivelFormacao;
 	
 	@Column(name = "data_conclusao", nullable = false)
-	private String dataConclusão;
+	private String dataConclusao;
 	
 	@Column(name = "instituicao_ensino", nullable = false)
 	private String instituicaoEnsino;
@@ -30,20 +30,20 @@ public class Formacao extends AbstractEntity{
 		this.nomeCurso = nomeCurso;
 	}
 	
-	public String getNivelCurso() {
-		return nivelCurso;
+	public String getNivelFormacao() {
+		return nivelFormacao;
 	}
 	
-	public void setNivelCurso(String nivelCurso) {
-		this.nivelCurso = nivelCurso;
+	public void setNivelFormacao(String nivelFormacao) {
+		this.nivelFormacao = nivelFormacao;
 	}
 	
-	public String getDataConclusão() {
-		return dataConclusão;
+	public String getDataConclusao() {
+		return dataConclusao;
 	}
 	
-	public void setDataConclusão(String dataConclusão) {
-		this.dataConclusão = dataConclusão;
+	public void setDataConclusao(String dataConclusao) {
+		this.dataConclusao = dataConclusao;
 	}
 	
 	public String getInstituicaoEnsino() {

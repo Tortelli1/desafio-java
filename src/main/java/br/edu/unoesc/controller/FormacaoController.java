@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.edu.unoesc.modelo.Formacao;
+import br.edu.unoesc.modelo.enums.NivelFormacao;
 import br.edu.unoesc.service.FormacaoService;
 
 @Controller
@@ -34,4 +35,7 @@ public class FormacaoController {
 		return "redirect:/formacao/cadastrar";
 	}
 
+	public NivelFormacao [] getNivelFormacao(){
+		return NivelFormacao.values();
+	}
 }

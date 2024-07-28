@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "PESSOA")
 public class Pessoa extends AbstractEntity{
-
+	
 	@Column(nullable = false, unique = true)
 	private String nome;
 	

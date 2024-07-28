@@ -37,10 +37,17 @@ public class PessoaServiceImpl implements PessoaService{
 		return dao.findById(id);
 	}
 
+	
 	@Override @Transactional(readOnly = true)
 	public List<Pessoa> buscarTodos() {
 	
 		return dao.findAll();
+	}
+
+	@Override
+	public List<Pessoa> buscarPorNome(String nome) {
+		// TODO Auto-generated method stub
+		return dao.findByNome(nome);
 	}
 
 }

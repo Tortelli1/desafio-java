@@ -15,4 +15,6 @@ public interface PessoaDao {
 	Pessoa findById(Long id);
 	
 	List<Pessoa> findAll();
+	
+	List<Pessoa> findByNome(String nome);
 }

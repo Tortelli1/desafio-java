@@ -15,4 +15,6 @@ public interface PessoaService {
 	Pessoa buscarPorId(Long id);
 	
 	List<Pessoa> buscarTodos();
+	
+	List<Pessoa> buscarPorNome(String nome);
 }

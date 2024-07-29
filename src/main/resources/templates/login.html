@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8" />
+<title>Login</title>
+<link href="/css/login.css" rel="stylesheet">
+</head>
+<body>
+
+    <section class="layout-content" layout:fragment="corpo">
+        <nav class="navbar navbar-expand-md bg-light">
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <i class="oi oi-caret-right"></i>
+                        <span>Login</span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h5>Login</h5>
+                        </div>
+                        <div class="card-body">
+                            <form action="/login" method="POST">
+                                <div class="form-group">
+                                    <label for="username">Usuário</label>
+                                    <input type="text" id="username" name="username" class="form-control" required />
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Senha</label>
+                                    <input type="password" id="password" name="password" class="form-control" required />
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+</body>
+</html>

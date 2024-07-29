@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+/* Importa a fonte Open Sans do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(239deg, #3B9D5C 0%, #1F477A 100%);
+    margin: 0;
+    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
+}
+
+.container {
+    max-width: 400px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-weight: 600; /* Usa o peso 600 da fonte */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 400; /* Usa o peso 400 da fonte */
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Adiciona padding e border ao tamanho total do elemento */
+    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
+    font-weight: 300; /* Usa o peso 300 da fonte */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}

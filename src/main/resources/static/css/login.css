@@ -3,62 +3,84 @@
 /* Importa a fonte Open Sans do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap');
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     background: linear-gradient(239deg, #3B9D5C 0%, #1F477A 100%);
-    margin: 0;
-    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
+    font-family: "Open Sans", sans-serif;
 }
 
 .container {
-    max-width: 400px;
-    padding: 20px;
+    width: 26em;
     background: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-h2 {
-    margin-bottom: 20px;
-    font-weight: 600; /* Usa o peso 600 da fonte */
+.logo {
+	margin-top: 25px;
+    margin-bottom: 5px;
+	width: 130px;
+	height: 100px;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .form-group label {
     display: block;
-    font-weight: 400; /* Usa o peso 400 da fonte */
+    font-weight: 400;
     margin-bottom: 5px;
 }
 
 .form-control {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    box-sizing: border-box; /* Adiciona padding e border ao tamanho total do elemento */
-    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
+    box-sizing: border-box;
+    font-size: 18px;
 }
 
 .btn-primary {
-    background-color: #007bff;
+    background-color: #134c7f;
     border: none;
     color: white;
-    padding: 10px 15px;
-    font-size: 16px;
+    padding: 15px 20px;
+    font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
     display: block;
-    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
-    font-weight: 300; /* Usa o peso 300 da fonte */
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+	
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	background-color: #46b553;
+    background-color: #46b553;
 }
+
+hr.divider {
+    margin: 20px 0;
+    width: 100%;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+

@@ -112,3 +112,7 @@ body {
 .btn-group {
 	display: flex;
 }
+
+.bg-dark {
+	background: linear-gradient(90deg, rgba(30,70,121,1) 0%, rgba(70,181,83,1) 100%);
+}

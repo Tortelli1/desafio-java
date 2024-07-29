@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Fato Aleatório</title>
+</head>
+<body>
+
+    <section class="layout-content" layout:fragment="corpo">
+        <nav class="navbar navbar-expand-md bg-light">
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <i class="oi oi-caret-right"></i>
+                        <span>Fato Aleatório</span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+
+            <div class="card mt-4" th:each="pessoaFato : ${pessoaFato}">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p><strong>Nome:</strong> <span th:text="${pessoaFato.nome}"></span></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p><strong>Fato Aleatório:</strong> <span th:text="${pessoaFato.fatoAleatorio}"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

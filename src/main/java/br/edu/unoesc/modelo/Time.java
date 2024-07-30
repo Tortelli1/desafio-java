@@ -1,5 +1,7 @@
 package br.edu.unoesc.modelo;
 
+import java.util.List;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -14,6 +16,9 @@ public class Time extends AbstractEntity{
 	@Column(nullable = false)
 	private String setor;
 	
+	@OneToMany(mappedBy = "time")
+	private List<Pessoa> pessoa;
+	
 	public String getNomeTime() {
 		return nomeTime;
 	}
@@ -26,6 +31,11 @@ public class Time extends AbstractEntity{
 	public void setSetor(String setor) {
 		this.setor = setor;
 	}
-	
+	public List<Pessoa> getPessoa() {
+		return pessoa;
+	}
+	public void setPessoa(List<Pessoa> pessoa) {
+		this.pessoa = pessoa;
+	}
 	
 }

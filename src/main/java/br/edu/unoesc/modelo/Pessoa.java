@@ -2,6 +2,9 @@ package br.edu.unoesc.modelo;
 
 import java.time.LocalDate;
 
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
+
 import br.edu.unoesc.modelo.enums.Genero;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -23,7 +26,8 @@ public class Pessoa extends AbstractEntity{
 	@Column(name = "cpf_formatado", nullable = false)
 	private String cpfFormatado;	
 
-	@Column(name = "data_nascimento" , nullable = false)
+	@DateTimeFormat(iso = ISO.DATE)
+	@Column(name = "data_nascimento" , nullable = false, columnDefinition = "DATE")
 	private LocalDate dataNascimento;
 	
 	@Enumerated(EnumType.STRING)

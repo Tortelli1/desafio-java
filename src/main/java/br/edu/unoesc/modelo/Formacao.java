@@ -1,5 +1,7 @@
 package br.edu.unoesc.modelo;
 
+import java.util.List;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -20,9 +22,8 @@ public class Formacao extends AbstractEntity{
 	@Column(name = "instituicao_ensino", nullable = false)
 	private String instituicaoEnsino;
 	
-	@ManyToOne
-	@JoinColumn(name = "time_id")
-	private Time time;
+	@OneToMany(mappedBy = "formacao")
+	private List<Pessoa> pessoa;
 	
 	public String getNomeCurso() {
 		return nomeCurso;
@@ -56,12 +57,6 @@ public class Formacao extends AbstractEntity{
 		this.instituicaoEnsino = instituicaoEnsino;
 	}
 	
-	public Time getTime() {
-		return time;
-	}
-	public void setTime(Time time) {
-		this.time = time;
-	}
 	
 }
 	 

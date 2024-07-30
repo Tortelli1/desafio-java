@@ -9,13 +9,15 @@ public class StringToLocalDateConversor implements Converter<String, LocalDate>{
 
 	private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
-    @Override
+	@Override
     public LocalDate convert(String source) {
+        if (source == null || source.trim().isEmpty()) {
+            return null;
+        }
         try {
             return LocalDate.parse(source, DATE_FORMATTER);
         } catch (DateTimeParseException e) {
             throw new IllegalArgumentException("Formato de data inválido: " + source, e);
         }
     }
-
 }

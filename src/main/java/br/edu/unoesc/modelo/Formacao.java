@@ -20,6 +20,7 @@ public class Formacao extends AbstractEntity{
 	private String instituicaoEnsino;
 	
 	@ManyToOne
+	@JoinColumn(name = "time_id")
 	private Time time;
 	
 	public String getNomeCurso() {

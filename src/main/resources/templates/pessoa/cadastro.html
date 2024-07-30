@@ -24,7 +24,7 @@
 	        
 	        	<div th:replace="~{fragments/alert}"></div>
 	        
-	            <form th:action="${pessoa.id == null ? '/pessoa/salvar' : '/pessoa/editar'}" th:object="${pessoa}" method="POST">
+	            <form th:action="@{/pessoa/editar}" th:object="${pessoa}" method="POST">
 	                <div class="form-row">
 	                    <div class="form-group col-md-6">
 	                        <label for="nome">Nome da Pessoa</label>
@@ -76,8 +76,8 @@
 	                    </div>
 	                    
 	                    <div class="form-group col-md-6">
-	                        <label for="genero">Formação</label>
-	                        <select id="genero" class="form-control" th:field="*{formacao.id}">
+	                        <label for="formacao">Formação</label>
+	                        <select id="formacao" class="form-control" th:field="*{formacao.id}">
 	                            <option value="">Selecione...</option>
 	                            <option th:each="f : ${formacao}" th:value="${f.id}" th:text="${f.nomeCurso}"></option>
 	                        </select>
@@ -87,8 +87,8 @@
 	                    </div>
 	                    
 	                    <div class="form-group col-md-6">
-	                        <label for="genero">Time</label>
-	                        <select id="genero" class="form-control" th:field="*{time.id}">
+	                        <label for="time">Time</label>
+	                        <select id="time" class="form-control" th:field="*{time.id}">
 	                            <option value="">Selecione...</option>
 	                            <option th:each="t : ${time}" th:value="${t.id}" th:text="${t.nomeTime}"></option>
 	                        </select>

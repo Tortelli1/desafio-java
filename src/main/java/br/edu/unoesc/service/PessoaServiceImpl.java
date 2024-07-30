@@ -46,7 +46,6 @@ public class PessoaServiceImpl implements PessoaService{
 
 	@Override
 	public List<Pessoa> buscarPorNome(String nome) {
-		// TODO Auto-generated method stub
 		return dao.findByNome(nome);
 	}
 

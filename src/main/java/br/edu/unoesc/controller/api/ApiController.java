@@ -63,11 +63,13 @@ public class ApiController {
 	            this.fatoAleatorio = fatoAleatorio;
 	        }
 	
-	        public String getNome() {
+	        @SuppressWarnings("unused")
+			public String getNome() {
 	            return nome;
 	        }
 	
-	        public String getFatoAleatorio() {
+	        @SuppressWarnings("unused")
+			public String getFatoAleatorio() {
 	            return fatoAleatorio;
 	        }
 	

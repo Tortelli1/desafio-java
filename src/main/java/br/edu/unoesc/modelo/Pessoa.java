@@ -2,9 +2,13 @@ package br.edu.unoesc.modelo;
 
 import java.time.LocalDate;
 
+import br.edu.unoesc.modelo.enums.Genero;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @SuppressWarnings("serial")
@@ -15,25 +19,28 @@ public class Pessoa extends AbstractEntity{
 	@Column(nullable = false)
 	private String nome;
 	
-	@Column(name = "cpf_formatado", nullable = false, unique = true)
+	@Column(name = "cpf_formatado", nullable = false)
 	private String cpfFormatado;	
 
 	@Column(name = "data_nascimento" , nullable = false)
 	private LocalDate dataNascimento;
 	
+	@Enumerated(EnumType.STRING)
 	@Column(nullable = false)
-	private String genero;
+	private Genero genero;
 	
 	@Column(name = "numero_telefone", nullable = false)
 	private String numeroTelefone;
 	
-	@Column(name = "endereco_email", nullable = false, unique = true)
+	@Column(name = "endereco_email", nullable = false)
 	private String enderecoEmail;
 	
-	@OneToOne
+	@ManyToOne
+	@JoinColumn(name = "time_id")
 	private Time time;
 	
-	@OneToOne
+	@ManyToOne
+	@JoinColumn(name = "formacao_id")
 	private Formacao formacao;
 
 	public String getNome() {
@@ -60,11 +67,11 @@ public class Pessoa extends AbstractEntity{
 		this.dataNascimento = dataNascimento;
 	}
 	
-	public String getGenero() {
+	public Genero getGenero() {
 		return genero;
 	}
 	
-	public void setGenero(String genero) {
+	public void setGenero(Genero genero) {
 		this.genero = genero;
 	}
 	

@@ -11,11 +11,12 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
-@SuppressWarnings("serial")
 @Entity
 @Table(name = "PESSOA")
 public class Pessoa extends AbstractEntity{
 	
+	private static final long serialVersionUID = 1L;
+
 	@Column(nullable = false)
 	private String nome;
 	

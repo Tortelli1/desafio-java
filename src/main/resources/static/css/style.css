@@ -116,3 +116,19 @@ body {
 .bg-dark {
 	background: linear-gradient(90deg, rgba(30,70,121,1) 0%, rgba(70,181,83,1) 100%);
 }
+
+.btn-custom {
+    background-color: #343a40;
+    color: white;           
+    padding: 6px 12px;     
+    border-radius: 5px;     
+    font-weight: bold;       
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #343a40;
+    color: white;
+    border-color: #343a40;
+}

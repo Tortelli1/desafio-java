@@ -19,7 +19,6 @@ import br.edu.unoesc.modelo.enums.Genero;
 import br.edu.unoesc.service.FormacaoService;
 import br.edu.unoesc.service.PessoaService;
 import br.edu.unoesc.service.TimeService;
-import br.edu.unoesc.service.validator.ValidadorCpf;
 import br.edu.unoesc.service.validator.ValidadorCpf.CpfValidator;
 
 @Controller

@@ -2,10 +2,11 @@ package br.edu.unoesc.modelo;
 
 import jakarta.persistence.*;
 
-@SuppressWarnings("serial")
 @Entity
 @Table(name = "TIME")
 public class Time extends AbstractEntity{
+
+	private static final long serialVersionUID = 1L;
 
 	@Column(name = "nome_Time", nullable = false)
 	private String nomeTime;

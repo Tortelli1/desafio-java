@@ -2,11 +2,12 @@ package br.edu.unoesc.modelo;
 
 import jakarta.persistence.*;
 
-@SuppressWarnings("serial")
 @Entity
 @Table(name = "FORMACAO")
 public class Formacao extends AbstractEntity{
 	
+	private static final long serialVersionUID = 1L;
+
 	@Column(name = "nome_curso", nullable = false, unique = true)
 	private String nomeCurso;
 	

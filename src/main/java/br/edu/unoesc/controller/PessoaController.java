@@ -19,6 +19,8 @@ import br.edu.unoesc.modelo.enums.Genero;
 import br.edu.unoesc.service.FormacaoService;
 import br.edu.unoesc.service.PessoaService;
 import br.edu.unoesc.service.TimeService;
+import br.edu.unoesc.service.validator.ValidadorCpf;
+import br.edu.unoesc.service.validator.ValidadorCpf.CpfValidator;
 
 @Controller
 @RequestMapping("/pessoa")
@@ -52,9 +54,14 @@ public class PessoaController {
 	
 	@PostMapping("/salvar")
 	public String salvar(Pessoa pessoa, RedirectAttributes attr) {
-		pessoaService.salvar(pessoa);
-		attr.addFlashAttribute("success", "Cadastro de Pessoa inserido com sucesso.");
-		return "redirect:/pessoa/cadastrar";
+		if (!CpfValidator.isValid(pessoa.getCpfFormatado())) {
+	        attr.addFlashAttribute("error", "CPF inválido.");
+	        return "redirect:/pessoa/cadastrar";
+	    }
+
+	    pessoaService.salvar(pessoa);
+	    attr.addFlashAttribute("success", "Cadastro de Pessoa inserido com sucesso.");
+	    return "redirect:/pessoa/cadastrar";
 	}
 	
 	@GetMapping("/editar/{id}")
@@ -69,9 +76,14 @@ public class PessoaController {
 	
 	@PostMapping("/editar")
 	public String editar(Pessoa pessoa, RedirectAttributes attr) {
-		pessoaService.editar(pessoa);
-		attr.addFlashAttribute("success", "Cadastro de Pessoa editado com sucesso!");
-		return "redirect:/pessoa/cadastrar";
+		if (!CpfValidator.isValid(pessoa.getCpfFormatado())) {
+	        attr.addFlashAttribute("error", "CPF inválido.");
+	        return "redirect:/pessoa/cadastrar";
+	    }
+
+	    pessoaService.editar(pessoa);
+	    attr.addFlashAttribute("success", "Cadastro de Pessoa editado com sucesso!");
+	    return "redirect:/pessoa/cadastrar";
 	}
 	
 	@GetMapping("/excluir/{id}")

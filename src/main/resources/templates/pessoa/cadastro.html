@@ -24,6 +24,10 @@
 	        
 	        	<div th:replace="~{fragments/alert}"></div>
 	        
+	        <div th:if="${error}" class="alert alert-danger">
+                <p th:text="${error}"></p>
+            </div>
+	        
 	            <form th:action="@{/pessoa/editar}" th:object="${pessoa}" method="POST">
 	                <div class="form-row">
 	                    <div class="form-group col-md-6">
